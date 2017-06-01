@@ -1,6 +1,7 @@
 angular.module('Examen').controller('sistemaUsuariosController', ['$scope', 'registroUsuarioService', '$sessionStorage', '$location', 'rolAdmin', '$route', '$timeout', function ($scope, agregarUsuario, $sessionStorage, $location, rolAdmin, $route, $timeout) {
 
         $scope.dataRegistrarUsuario = {
+            id:'',
             nombre: '',
             alias: '',
             contrasena: '',
@@ -54,7 +55,7 @@ angular.module('Examen').controller('sistemaUsuariosController', ['$scope', 'reg
             $scope.edit.nombre = dato.usu_nombre;
             $scope.edit.alias = dato.usu_alias;
             $scope.edit.contrasena = dato.usu_contrasena;
-            $scope.edit.rol = dato.rol_id;
+            $scope.edit.rolid = dato.rol_id;
 
             $('#editarUsuario').modal('toggle');
         };

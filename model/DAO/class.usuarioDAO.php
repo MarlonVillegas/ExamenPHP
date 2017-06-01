@@ -39,7 +39,7 @@ class usuarioDAO extends dataSource implements IUsuario {
     }
 
     public function select() {
-        $sql = 'SELECT usu_nombre,usu_alias, rol_id FROM usuario WHERE usu_deleted_at IS NULL';
+        $sql = 'SELECT usu_id,usu_nombre,usu_alias, rol_id FROM usuario WHERE usu_deleted_at IS NULL';
         return $this->query($sql);
     }
 
