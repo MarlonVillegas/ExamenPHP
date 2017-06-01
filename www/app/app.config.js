@@ -12,6 +12,10 @@ angular.module('Examen').config(['$routeProvider', '$httpProvider', function con
                     controller: 'registroContactosController',
                     templateUrl: 'app/template/registroContactos.html'
                 }).
+                when('/sistemaUsuarios', {
+                    controller: 'sistemaUsuariosController',
+                    templateUrl: 'app/template/sistemaUsuarios.html'
+                }).
                 otherwise('/');
     }
 ]);

@@ -7,13 +7,10 @@ class agregarUsuario extends controllerExtended {
       $this->loadTableusuario();
 
       $usuario = new usuario();
-      $usuario->setCedula($request->getParam('cedula'));
       $usuario->setNombre($request->getParam('nombre'));
-      $usuario->setApellido($request->getParam('apellido'));
-      $usuario->setTelefono($request->getParam('telefono'));
       $usuario->setAlias($request->getParam('alias'));
       $usuario->setRolId($request->getParam('rol'));
-      $usuario->setPassword($request->getParam('contrasena'), $this->getConfig()->getHash());
+      $usuario->setContrasena($request->getParam('contrasena'), $this->getConfig()->getHash());
 
       $usuarioDAO = new usuarioDAOExt($this->getConfig());
       $respuesta1 = $usuarioDAO->insert($usuario);

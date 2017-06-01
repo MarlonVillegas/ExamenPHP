@@ -3,7 +3,7 @@
 class usuario {
 
     private $id;
-    private $cedula;
+    private $nombre;
     private $alias;
     private $contrasena;
     private $rolid;
@@ -12,8 +12,8 @@ class usuario {
         return $this->id;
     }
 
-    function getCedula() {
-        return $this->cedula;
+    function getNombre() {
+        return $this->nombre;
     }
 
     function getAlias() {
@@ -32,8 +32,8 @@ class usuario {
         $this->id = $id;
     }
 
-    function setCedula($cedula) {
-        $this->cedula = $cedula;
+    function setNombre($nombre) {
+        $this->nombre = $nombre;
     }
 
     function setAlias($alias) {
