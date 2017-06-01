@@ -35,11 +35,16 @@ angular.module('Examen').config(['$routeProvider', '$httpProvider', function con
                     templateUrl: 'app/template/sistemaUsuarios.html',
                     middleware: ['comprobarSession']
                 }).
-                 when('/logout', {
+                when('/logout', {
                     controller: 'logoutController',
                     template: '<p>Cerrando sesión...</p>',
                     middleware: ['comprobarSession']
-                }).       
-                otherwise('/');
+                }).
+                when('/info', {
+                    controller: 'infoController',
+                    templateUrl: 'app/template/info.html',
+                    middleware: ['comprobarSession']
+                }).
+        otherwise('/');
     }
 ]);

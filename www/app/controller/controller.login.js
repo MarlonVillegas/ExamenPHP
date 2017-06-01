@@ -11,7 +11,7 @@ angular.module('Examen').controller('loginController', ['$scope', 'securityServi
                     $scope.datos = {};
                 } else {
                     $sessionStorage.usuario = response.data.datos[0];
-                    $location.path('/inicio');
+                    $location.path('/info');
                 }
             }, function errorCallback(response) {
                 console.error(response);
